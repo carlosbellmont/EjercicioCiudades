@@ -9,7 +9,7 @@ fun main() {
         print("\"$it\",")
     }
     println()
-    // Crea una lista lazy list de todas las ciudades que tengan la letra "a" mayúscula o minúscula. Las que tengan una "A"
+    // Crea una lista de todas las ciudades que tengan la letra "a" mayúscula o minúscula. Las que tengan una "A"
     // deber ser mostradas en mayúsculas todas las letras.
     ejercicio2(ciudades).forEach{
         print("\"$it\",")
@@ -41,12 +41,7 @@ fun ejercicio2(ciudades: List<String>) : List<String> {
 }
 
 fun ejercicio3(ciudades: List<String>): List<String> {
-    val ciudadesABorrar = ciudades.filter { it.length == 8 }
-    // Las tres últimas líneas podrían reducirse a esta:
-    // return ciudades.toMutableList().apply { removeAll(ciudadesABorrar) }
-    val ciudadesMutable = ciudades.toMutableList()
-    ciudadesMutable.removeAll(ciudadesABorrar)
-    return ciudadesMutable
+    return ciudades.filter { it.length != 8 }
 }
 
 fun ejercicio4(ciudades: List<String>): List<String> {

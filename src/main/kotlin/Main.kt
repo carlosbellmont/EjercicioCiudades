@@ -34,7 +34,7 @@ fun ejercicio1(ciudades: List<String>): List<String> {
 }
 
 fun ejercicio2(ciudades: List<String>) : List<String> {
-    val result = ciudades.filter { it.contains("a") || it.contains("A") }.toMutableList()
+    val result = ejercicio1(ciudades).toMutableList()
     result.forEachIndexed { pos, item ->
         if (item.contains("A")) result[pos] = item.uppercase() }
     return result

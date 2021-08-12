@@ -47,7 +47,7 @@ fun ejercicio3(ciudades: List<String>): List<String> {
 fun ejercicio4(ciudades: List<String>): List<String> {
     val ciudadesMutable = ciudades.toMutableList()
     val ciudadesImpares = ciudades.filter { (it.length.rem(2) == 1) }
-    ciudadesImpares.forEach { ciudadImpar: String ->  ciudadesMutable.forEachIndexed{ index: Int, ciudad: String ->  if (ciudad.contentEquals(ciudadImpar)) ciudadesMutable[index] = ciudadesMutable[index].reversed() }  }
+    ciudadesMutable.forEachIndexed{ index: Int, ciudad: String ->  if (ciudadesImpares.contains(ciudad)) ciudadesMutable[index] = ciudadesMutable[index].reversed() }
     return ciudadesMutable
 }
 

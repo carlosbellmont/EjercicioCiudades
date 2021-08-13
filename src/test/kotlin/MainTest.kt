@@ -12,7 +12,7 @@ class Test {
             "Santiago","Sevilla","Tarragona","Valencia","Zaragoza",)
 
         val output = ejercicio1(input)
-        assert(outputEsperado.containsAll(output) && output.containsAll(outputEsperado))
+        assert(output == outputEsperado)
     }
 
     @Test
@@ -25,7 +25,7 @@ class Test {
             "Ibiza","Madrid","Málaga","Marbella","Murcia","Pamplona","Ronda","Salamanca","San Sebastián","Santander",
             "Santiago","Sevilla","Tarragona","Valencia","Zaragoza")
         val output = ejercicio2(input)
-        assert(outputEsperado.containsAll(output) && output.containsAll(outputEsperado))
+        assert(output == outputEsperado)
     }
 
     @Test
@@ -38,7 +38,7 @@ class Test {
             "Granada","Huelva","Ibiza","Jerez","Madrid","Málaga","Murcia","Oviedo","Ronda","Salamanca","San Sebastián",
             "Santander","Sevilla","Tarragona","Toledo",)
         val output = ejercicio3(input)
-        assert(outputEsperado.containsAll(output) && output.containsAll(outputEsperado))
+        assert(output == outputEsperado)
     }
 
 
@@ -53,6 +53,6 @@ class Test {
             "Pamplona","adnoR","acnamalaS","náitsabeS naS","rednatnaS","Santiago","alliveS","anogarraT","Toledo","Valencia",
             "Zaragoza")
         val output = ejercicio4(input)
-        assert(outputEsperado.containsAll(output) && output.containsAll(outputEsperado))
+        assert(output == outputEsperado)
     }
 }
